@@ -1,0 +1,33 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixin';
+
+.App {
+  @extend .display-flex;
+  @extend .flex-direction-column;
+  @extend .flex-center;
+  height: 100vh;
+}
+
+.Main {
+  @extend .responsive-width;
+  padding: 10px;
+  @extend .bsbb;
+  height: 100%;
+  @extend .display-flex;
+  @extend .flex-direction-column;
+  @extend .flex-center;
+  text-align: center;
+  font-size: 2vh;
+}
+
+.Logo {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.Link {
+  font-size: 2vh;
+  text-decoration: none;
+  color: $my-red;
+  margin-top: 50px;
+}

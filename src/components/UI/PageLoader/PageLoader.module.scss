@@ -1,0 +1,49 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixin';
+
+.LoaderBkg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($my-blue, 0.2);
+  z-index: $zi-page-loader;
+  @extend .display-flex;
+  @extend .flex-center;
+  @extend .backdrop;
+}
+
+.Loader {
+  width: 60px;
+  height: 60px;
+  border: 2px solid $my-blue;
+  border-radius: 50%;
+  border-top: 2px solid transparent;
+  @include border-radius(50%);
+  animation: rotation 3s linear infinite;
+}
+
+.Logo {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @extend .display-flex;
+  @extend .flex-center;
+  img {
+    width: 30px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
